@@ -1,10 +1,17 @@
 * {
-    margin: 0;
+    margin: 0 ;
     padding: 0;
 }
 
-
-
+a {
+    text-decoration: none;
+}
+p {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
 h1 {
     padding-bottom: 66px;
     font-size: 30px;
@@ -15,6 +22,7 @@ h1 {
 }
 
 h2 {
+    padding-top: 50px;
     padding-bottom: 29px;
     font-size: 20px;
     letter-spacing: 0px;
@@ -23,7 +31,13 @@ h2 {
     font-weight: 700;
     font-family: "Roboto";
 }
-
+h3 {
+    font-size: 18px;
+    padding-bottom: 26px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+}
 input {
     width: 100%;
     padding: 12px;
@@ -46,10 +60,35 @@ textarea{
     height: 100%;
     padding: 13px;
     resize: vertical;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+}
+
+.padding {
+    padding: 15px 0;
+}
+.paddingg {
+    padding-bottom: 15px ;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.flex_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .wrapper {
     padding: 77px 99px;
+}
+
+.commonforms {
+    padding-bottom: 51px;
 }
 
 .commoninput {
@@ -77,4 +116,320 @@ textarea{
     color: #ffffff;
     background-color: #12d661;
     cursor: pointer;
+}
+
+.element {
+    padding-bottom: 90px;
+}
+.checkbox  {
+    gap: 62px;
+}
+.checkboxinput, .checkboxinputtwo, .customstyle  {
+    padding-bottom: 10px;
+}
+
+.checkboxinput p, .checkboxinputtwo  p {
+   padding-left: 10px;
+}
+
+.real {
+    display: none;
+}
+
+.custom {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.custom::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #3e6aff;
+    border: 1px solid #3e6aff;
+    transform: translate( -50% ,-50%)  scale(0);
+    box-sizing: border-box;
+}
+
+.real:checked + .custom::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.real:checked + .custom {
+     border: 1px solid #3e6aff;
+}
+
+.customtwo {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.customtwo::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    border: 1px solid #3e6aff;
+    background-color: #3e6aff;
+    transform: translate( -50% ,-50%)  scale(0);
+    box-sizing: border-box;
+}
+
+.real:checked + .customtwo::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.real:checked + .customtwo {
+     border: 1px solid #3e6aff;
+}
+
+.table {
+    padding: 20px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+  
+}
+.table th {
+    padding: 0 12px;
+}
+
+.table p {
+    margin-left: 9px;
+}
+
+.list label{
+    padding-bottom: 19px;
+}
+
+.style {
+    padding-bottom: 50px;
+    align-items: center;
+    gap: 300px;
+}
+
+.listchekbox {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+.svg {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 10px;
+}
+
+.boy , .girl {
+    gap: 15px;
+}
+
+.checkboxstyle {
+    gap: 10px;
+}
+
+.customstyle {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+    border-radius: 13px;
+    background-color: #cfcfd1;
+    box-sizing: border-box;
+}
+
+.customstyle::before{
+    content: '';
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    width: 21px;
+    height: 21px;
+    border-radius: 11px;
+    background-color: #ffffff;
+    transform: translate( -50% ,-50%)  scale(0);
+    transform: translate(-50%, -50%) scale(1);
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.real:checked + .customstyle::before {
+    transform: translate(40%, -50%) scale(1);
+    transition: 0.5s;
+}
+
+.real:checked + .customstyle {
+    background-color: #3e6aff;
+     transition: 0.5s;
+}
+
+.tablefour {
+    padding-bottom: 49px;
+}
+
+.tablefour p{
+    padding-right: 98px;
+}
+tr {
+    align-items: center;
+}
+
+.file input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+   position: absolute;
+}
+
+.file span {
+    display: inline-block;
+    padding: 12px 38px;
+    border-radius: 3px;
+    background-color: #3e6aff;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+}
+
+.coment {
+    padding-bottom: 140px;
+}
+
+.checkboxinput2 p {
+    padding-right: 24px;
+}
+
+.checkboxinput2 {
+    gap: 9px;
+}
+
+.select2 {
+    width: 330px;
+    padding: 11px;
+    margin-bottom: 0;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.formtable tr {
+    display: block;
+    margin-top: 18px;
+    
+}
+
+.formtable th ,td{
+   text-align: left;
+   padding-right: 10px;
+}
+
+.formtable p {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+}
+.formtable select {
+    width: 219px;
+    padding: 11px;
+    margin-top: 9px;
+    margin-bottom: 0;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+.select {
+    position: relative;
+    display: inline-block;
+    appearance: none;
+     -webkit-appearance: none;
+  -moz-appearance: none;
+    text-align-last:right ;
+    padding-right: 10px;
+    color:  #cccccc;
+}
+
+.select::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    pointer-events: none; 
+    font-size: 12px;
+    width: 9px;
+    height: 5px;
+    background-color: #1f222c;
+    z-index: 1;
+}
+.tableinput input {
+    margin-top: 9px;
+    width: 193px;
+}
+
+.tableinputadres input {
+    margin-top: 9px;
+    width: 450px;
+    box-sizing: border-box;
+}
+
+.hr  {
+    width: 681px;
+    border-bottom:  1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.checkboxinputtwo p {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+}
+
+
+.back {
+    padding: 12px 30px;
+    border-radius: 3px;
+    margin-left: -1px;
+    margin-right: 279px;
+    background-color: #ffffff;
+    border: 1px solid #85868d;
+}
+
+.back a {
+    font-size: 14px;
+    color: #6e6f77;
+    font-weight: 700;
+}
+
+.go {
+    padding: 13px 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: #12d661;
+}
+
+.go a {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
 }
