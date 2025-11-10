@@ -1,3 +1,33 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Regular.woff') format('woff'),
+        url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
+        url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Medium.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Medium.woff') format('woff'),
+        url('../fonts/RobotoSlab-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0 ;
     padding: 0;
@@ -137,69 +167,37 @@ textarea{
 }
 
 .custom {
-    position: relative;
-    display: inline-block;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: #ffffff;
-    border: 1px solid #cccccc;
+    outline: 1px solid #cccccc;
     box-sizing: border-box;
 }
 
-.custom::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
+
+.real:checked + .custom{
+     border-radius: 50%;
     background-color: #3e6aff;
-    border: 1px solid #3e6aff;
-    transform: translate( -50% ,-50%)  scale(0);
-    box-sizing: border-box;
-}
-
-.real:checked + .custom::before {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.real:checked + .custom {
-     border: 1px solid #3e6aff;
+    outline: 1px solid #3e6aff;
+    border: 4px solid #ffffff;
 }
 
 .customtwo {
-    position: relative;
-    display: inline-block;
     width: 15px;
     height: 15px;
     border-radius: 3px;
     background-color: #ffffff;
-    border: 1px solid #cccccc;
+    outline: 1px solid #cccccc;
     box-sizing: border-box;
 }
 
-.customtwo::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 10px;
-    height: 10px;
+
+.real:checked + .customtwo{
     border-radius: 3px;
-    border: 1px solid #3e6aff;
     background-color: #3e6aff;
-    transform: translate( -50% ,-50%)  scale(0);
-    box-sizing: border-box;
-}
-
-.real:checked + .customtwo::before {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.real:checked + .customtwo {
-     border: 1px solid #3e6aff;
+    outline: 1px solid #3e6aff;
+    border: 1px solid #ffffff;
 }
 
 .table {
@@ -207,10 +205,22 @@ textarea{
     border-radius: 3px;
     background-color: #f7f7f7;
     border: 1px solid #e5e5e5;
-  
 }
-.table th {
-    padding: 0 12px;
+
+.table thead {
+    display: inline-block;
+    padding-bottom: 14px;
+}
+
+.table tbody {
+    display: inline-block;
+}
+
+.table th  { 
+   padding-right: 26px;
+}
+.table td {
+    padding-right: 37px;
 }
 
 .table p {
@@ -432,4 +442,69 @@ tr {
     font-size: 14px;
     color: #ffffff;
     font-weight: 700;
+}
+
+.fixform {
+    position: fixed;
+    top: 229px;
+    right: 101px;
+    padding: 17px 24px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+}
+
+.fixform a {
+    font-size: 13px;
+    color: #3e6aff;
+    font-weight: 400;
+}
+
+.fixform {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fixform svg {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.fixinput {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.fix  input {
+    height: 36px;
+    width: 260px;
+    box-sizing: border-box;
+}
+
+.bottom {
+    padding-bottom: 13px;
+}
+
+.fixp {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    padding-bottom: 7px;
+}
+
+.go a {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.fixh2 {
+    position: absolute;
+    top: 177px;
+    right: 174px;
 }

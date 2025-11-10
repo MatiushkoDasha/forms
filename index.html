@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="css/style.css">
     <title>Forms</title>
 </head>
@@ -188,7 +189,7 @@
             <div class="formtable">
                 <table>
                     <thead>
-                        <tr>
+                    <tr>
                         <th><p>Прізвище та ім’я</p> <p class="tableinput"><label><input type="text" ></label></p></th>
                         <th><p>Ел. пошта</p> <p class="tableinput"><label><input type="email"></label></p></th>
                         <th><p>Телефон</p> <p class="tableinput"><label><input type="number" ></label></p></th>
@@ -227,6 +228,21 @@
                     </tr>
                 </tbody>
                 </table>
+            </div>
+            <h2 class="fixh2">06. фіксована форма</h2>
+            <div class="fixform">
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><style>.a{fill:#b3b3b3}</style><path fill-rule="evenodd" class="a" d="m9.9 8.5l-1.4 1.4-3.5-3.5-3.5 3.5-1.4-1.4 3.5-3.5-3.5-3.5 1.4-1.4 3.5 3.5 3.5-3.5 1.4 1.4-3.5 3.5z"/></svg>
+                <div class="fixinpit">
+                    <p class="fixp">Логін</p><p class="fix bottom"><label><input type="text" ></label></p>
+                    <p class="fixp">Пароль</p><p class="fix"><label><input type="text" ></label></p>
+                </div>
+                <a href="#">Забули пароль?</a>
+                <label class="checkboxinputtwo flex">
+                    <input type="checkbox" class="real" name="checkbox">
+                    <span class="customtwo"></span>
+                    <p>Запам’ятати пароль</p>
+                </label>
+                <td><button class="go"><a href="#">Увійти</a></button></td>
             </div>
         </main>
         <footer></footer>
