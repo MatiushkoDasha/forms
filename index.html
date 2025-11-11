@@ -16,12 +16,14 @@
                 <form action="#">
                     <p class="commoninput"><label><input type="text" placeholder="Введіть ім’я"></label></p>
                     <p class="commoninput"><label><input type="email" placeholder="Email" "></label></p>
-                    <select  id="list">
-                        <option disabled  value="Ваше місто" selected> Ваше місто</option>
-                        <option value="lol">Київ</option>
-                        <option value="glol">Хмельницький</option>
-                        <option value="flol">Мухосранськ</option>
-                    </select>
+                    <label class="labelselectcom">
+                        <select  id="list">
+                            <option disabled  value="Ваше місто" selected> Ваше місто</option>
+                            <option value="lol">Київ</option>
+                            <option value="glol">Хмельницький</option>
+                            <option value="flol">Мухосранськ</option>
+                        </select>
+                    </label>
                     <p class="commontextarea"><textarea placeholder="Email" name="text" id="textarea"></textarea></p>
                     <p class="commonbuttom"><label><input type="submit" placeholder="Зареєструватися"></label></p>
                 </form>
@@ -51,17 +53,19 @@
                         <div class="block2">
                               <label class="checkboxinputtwo flex">
                                 <input type="checkbox" class="real" name="checkbox">
-                                <span class="customtwo"></span>
+                                <span class="customtwo">
+                                     <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span>
+                                </span>
                                 <p> Прочитав умови договору</p>
                             </label>
                              <label class="checkboxinputtwo flex">
                                 <input type="checkbox" class="real" name="checkbox">
-                                <span class="customtwo"></span>
+                                <span class="customtwo"> <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span></span>
                                 <p>Згідний з ПДВ 9%</p>
                             </label>
                              <label class="checkboxinputtwo flex">
                                 <input type="checkbox" class="real" name="checkbox">
-                                <span class="customtwo"></span>
+                                <span class="customtwo"> <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span></span>
                                 <p>Отримувати новини на ел. пошту</p>
                             </label>
                         </div>
@@ -72,17 +76,17 @@
                                 <th><p>Статус</p></th>
                                 <th><label class=" flex">
                                         <input type="checkbox" class="real" name="checkbox">
-                                        <span class="customtwo"></span>
+                                        <span class="customtwo"> <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span></span>
                                         <p>Новинки</p>
                                     </label></th>
                                 <th><label class=" flex">
                                         <input type="checkbox" class="real" name="checkbox">
-                                        <span class="customtwo"></span>
+                                        <span class="customtwo"> <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span></span>
                                         <p>Акційні товари</p>
                                     </label></th>
                                 <th><label class=" flex">
                                         <input type="checkbox" class="real" name="checkbox">
-                                        <span class="customtwo"></span>
+                                        <span class="customtwo"> <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span></span>
                                         <p>Розпродаж</p>
                                     </label></th>
                             </tr>
@@ -146,12 +150,15 @@
                         <tr>
                             <td><p>Місто:</p></td>
                             <td> 
-                                <select class="select2" id="list">
-                                    <option disabled  value="Ваше місто" selected> Ваше місто</option>
-                                    <option value="lol">Київ</option>
-                                    <option value="glol">Хмельницький</option>
-                                    <option value="flol">Мухосранськ</option>
-                                </select></td>
+                                    <label class="labelselectcom">
+                                        <select class="select2" id="list">
+                                            <option disabled  value="Ваше місто" selected> Ваше місто</option>
+                                            <option value="lol">Київ</option>
+                                            <option value="glol">Хмельницький</option>
+                                            <option value="flol">Мухосранськ</option>
+                                        </select>
+                                    </label>
+                            </td>
                         </tr>
                         <tr>
                             <td class="padding"><p>Стать:</p></td>
@@ -199,12 +206,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><p>Країна</p><select  class="select" id="list">
-                                    <option disabled value=""  selected>|</option>
-                                    <option value="lol">Київ</option>
-                                    <option value="glol">Хмельницький</option>
-                                    <option value="flol">Мухосранськ</option>
-                                </select></td>
+                            <td><p>Країна</p>
+                                <label class="labelselectcom labelselectform">
+                                    <select  class="formselect" id="list">
+                                            <option disabled value=""  selected></option>
+                                            <option value="lol">Київ</option>
+                                            <option value="glol">Хмельницький</option>
+                                            <option value="flol">Мухосранськ</option>
+                                        </select>
+                            </label></td>
                                 <td colspan="2"><p>Адреса</p> <p class="tableinputadres"><label><input type="text"></label></p></td>
                             </tr>
                             <tr>
@@ -215,7 +225,7 @@
                       <tr>
                         <td><label class="checkboxinputtwo flex">
                                 <input type="checkbox" class="real" name="checkbox">
-                                <span class="customtwo"></span>
+                                <span class="customtwo"> <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span></span>
                                 <p> Я погоджуюсь з правилами оплати та доставки товару</p>
                             </label></td>
                       </tr>
@@ -239,7 +249,7 @@
                 <a href="#">Забули пароль?</a>
                 <label class="checkboxinputtwo flex">
                     <input type="checkbox" class="real" name="checkbox">
-                    <span class="customtwo"></span>
+                    <span class="customtwo"> <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span></span>
                     <p>Запам’ятати пароль</p>
                 </label>
                 <td><button class="go"><a href="#">Увійти</a></button></td>
