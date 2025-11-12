@@ -44,17 +44,17 @@
                                 <span class="custom"></span>
                                 <p>Кур’єр</p>
                             </label>
-                             <label class="checkboxinput flex">
-                                <input type="checkbox" class="real" name="checkbox">
-                                <span class="custom"></span>
-                                <p>Самовивіз</p>
+                             <label class="checkboxinput flex ">
+                                <input type="checkbox" class="real" name="checkbox" disabled>
+                                <span class="disabled"></span>
+                                <p class="disp">Самовивіз</p>
                             </label>
                         </div>
                         <div class="block2">
                               <label class="checkboxinputtwo flex">
                                 <input type="checkbox" class="real" name="checkbox">
                                 <span class="customtwo">
-                                     <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span>
+                                     <span><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span>
                                 </span>
                                 <p> Прочитав умови договору</p>
                             </label>
@@ -63,10 +63,10 @@
                                 <span class="customtwo"> <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span></span>
                                 <p>Згідний з ПДВ 9%</p>
                             </label>
-                             <label class="checkboxinputtwo flex">
-                                <input type="checkbox" class="real" name="checkbox">
-                                <span class="customtwo"> <span class="customsvg"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span></span>
-                                <p>Отримувати новини на ел. пошту</p>
+                             <label class="checkboxinputtwo disptwo flex">
+                                <input type="checkbox" class="real" name="checkbox" disabled>
+                                <span class="disabltwo"></span>
+                                <p class="disp">Отримувати новини на ел. пошту</p>
                             </label>
                         </div>
                     </div>
@@ -106,28 +106,36 @@
             <h2>03. стилізовані чекбокси </h2>
             <div class="style flex">
                 <div class="svg">
-                        <div class="boy flex">
-                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70"><defs><image  width="70" height="70" id="img1" href="data:image/png;base64,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"/></defs><style></style><use  href="#img1" x="0" y="0"/></svg>
-                       <p>Чоловік</p>
+                        <div class="boy ">
+                            <label class="flex">
+                               <input type="radio"  name="gender" class="boy-input">                          
+                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70"><defs><image  width="70" height="70" id="img1" href="data:image/png;base64,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"/></defs><style></style><use  href="#img1" x="0" y="0"/></svg>
+                               <p class="svgp">Чоловік</p>
+                               <div class="boyhover"></div>
+                            </label> 
                         </div>
-                        <div class="girl flex">
-                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70"><defs><image  width="70" height="70" id="img1" href="data:image/png;base64,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"/></defs><style></style><use  href="#img1" x="0" y="0"/></svg>
-                       <p>Жінка</p>
+                       <div class="girl ">
+                           <label class="flex">
+                               <input type="radio"  name="gender" class="girl-input">
+                               <img src="img/girl.svg" alt="">
+                               <p class="svgp">Жінка</p>
+                               <div class="girlhover"></div>
+                            </label>
                         </div>
                 </div>
                 <form class="listchekbox">
                     <label class="checkboxstyle flex">
-                        <input type="checkbox" class="real" name="checkbox">
+                        <input type="radio" class="real" name="checkbox">
                         <span class="customstyle"></span>
                         <p>Отримувати новини</p>
                     </label>
                       <label class="checkboxstyle flex">
-                        <input type="checkbox" class="real" name="checkbox">
+                        <input type="radio" class="real" name="checkbox">
                         <span class="customstyle"></span>
                         <p>Купити додому ковбаси</p>
                     </label>
                       <label class="checkboxstyle flex">
-                        <input type="checkbox" class="real" name="checkbox">
+                        <input type="radio" class="real" name="checkbox">
                         <span class="customstyle"></span>
                         <p>Включити світло</p>
                     </label>
@@ -185,7 +193,7 @@
                         <tr>
                             <td><p class="coment">Коментарій:</p></td>
                             <td> <p class="commontextarea"><textarea placeholder="Введіть текст повідомлення" name="text" id="textarea"></textarea></p>
-                                <p class="commonbuttom"><label><input type="submit" placeholder="Зареєструватися"></label></p></td>
+                                <p class="commonbuttom"><label><input type="submit" placeholder="Зареєструватися"></label></p>
                         </tr>
                     </tbody>
                 </table>
@@ -199,7 +207,7 @@
                     <tr>
                         <th><p>Прізвище та ім’я</p> <p class="tableinput"><label><input type="text" ></label></p></th>
                         <th><p>Ел. пошта</p> <p class="tableinput"><label><input type="email"></label></p></th>
-                        <th><p>Телефон</p> <p class="tableinput"><label><input type="number" ></label></p></th>
+                        <th><p>Телефон</p> <p class="tableinput"><label><input type="tel" ></label></p></th>
                     </tr>
                     <tr class="hr">
                     </tr>

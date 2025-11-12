@@ -1,29 +1,29 @@
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Regular.woff2') format('woff2'),
-        url('../fonts/RobotoSlab-Regular.woff') format('woff'),
-        url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/Roboto-Medium.woff') format('woff'),
+        url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
-        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
-        url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.ttf') format('truetype');
     font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Medium.woff2') format('woff2'),
-        url('../fonts/RobotoSlab-Medium.woff') format('woff'),
-        url('../fonts/RobotoSlab-Medium.ttf') format('truetype');
-    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -76,19 +76,42 @@ input {
     border: 1px solid #cccccc;
 }
 
+input:focus {
+    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+    outline: 1px solid #3e6aff;
+}
+
+select:focus {
+    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+    outline: 1px solid #3e6aff;
+}
+
+textarea:focus{
+    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+    outline: 1px solid #3e6aff;
+}
+
+button:hover{
+    background-color: blue;
+    color: white;
+    filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
+}
+
 select {
+    position: relative;
     appearance: none;
     width: 330px;
     margin-bottom: 10px;
     padding: 11px;
     border-radius: 3px;
-    background-color: #ffffff;
+   background-color: rgba(255, 255, 255, 0.01);
     border: 1px solid #cccccc;
+    z-index: 2;
 }
 
 textarea{
     width: 100%;
-    height: 100%;
+    max-height: 110px;
     padding: 13px;
     resize: vertical;
     border-radius: 3px;
@@ -163,6 +186,37 @@ textarea{
    padding-left: 10px;
 }
 
+.disabled {
+    width: 15px;
+    height: 15px;
+    margin-left: -1px;
+    border-radius: 7px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+
+.disp  {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+}
+
+.disptwo p {
+font-size: 14px;
+color: #b3b3b3;
+font-weight: 400;
+font-family: "Roboto";
+}
+
+.disabltwo{
+    margin-left: -1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+
 .real {
     display: none;
 }
@@ -192,28 +246,34 @@ textarea{
     background-color: #ffffff;
     outline: 1px solid #cccccc;
     box-sizing: border-box;
+    z-index: 2;
 }
 
-.customsvg {
+.customtwo svg {
     fill: #ffffff;
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-45%, -50%);
     top: 50%;
     left: 49%;
-    z-index: 8;
+    z-index: 1;
 }
 
-
-.real:checked + .customtwo {
-    display: block;
+.real:checked + .customtwo  {
     border-radius: 3px;
-    background-color: #3e6aff;
+    background-color: #ffffff;
     outline: 1px solid #3e6aff;
 }
 
+.real:checked + .customtwo svg {
+    fill: #3e6aff;
+}
+
+
 .table {
+    width: 518px;
+    height: 114px;
     padding: 20px;
     border-radius: 3px;
     background-color: #f7f7f7;
@@ -255,6 +315,7 @@ textarea{
     flex-direction: column;
     gap: 19px;
 }
+
 .svg {
     display: flex;
     flex-direction: column;
@@ -262,8 +323,61 @@ textarea{
     gap: 10px;
 }
 
-.boy , .girl {
+.boy label , .girl label{
     gap: 15px;
+}
+
+.girl input {
+    display: none;
+    appearance: none;
+    opacity: 0;
+}
+
+.boy input {
+    display: none;
+    appearance: none;
+    opacity: 0;
+}
+
+.boyhover {
+    display: none;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/boyhover.svg);
+}
+
+.boy-input:checked ~ .boyhover {
+  display: block;
+}
+
+.boy-input:checked ~ .svgp{
+    color: #3e6aff;
+}
+.girl  {
+    position: relative;
+}
+
+.girlhover {
+    display: none;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/girlhover.svg);
+}
+
+.girl-input:checked ~ .girlhover {
+  display: block;
+}
+
+.girl-input:checked ~ .svgp{
+    color: #3e6aff;
+}
+
+.svgp {
+    font-size: 16px;
+    color: #1f222c;
+    font-weight: 700;
 }
 
 .checkboxstyle {
@@ -352,7 +466,6 @@ tr {
     padding: 11px;
     margin-bottom: 0;
     border-radius: 3px;
-    background-color: #ffffff;
     border: 1px solid #cccccc;
 }
 
@@ -372,14 +485,17 @@ tr {
     color: #b3b3b3;
     font-weight: 400;
 }
+
 .formtable select {
+    position: relative;
     width: 219px;
     padding: 11px;
     margin-top: 9px;
     margin-bottom: 0;
     border-radius: 3px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.01);
     border: 1px solid #cccccc;
+    z-index: 2;
 }
 
 .labelselectform::after {
@@ -415,12 +531,12 @@ tr {
 
 .checkboxinputtwo p {
     font-size: 14px;
-    color: #1f222c;
     font-weight: 400;
 }
 
 
-.back {
+
+.back  {
     padding: 12px 30px;
     border-radius: 3px;
     margin-left: -1px;
@@ -430,10 +546,11 @@ tr {
 }
 
 .back a {
-    font-size: 14px;
     color: #6e6f77;
+    font-size: 14px;
     font-weight: 700;
 }
+
 
 .go {
     padding: 13px 30px;
@@ -457,6 +574,7 @@ tr {
     filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
     background-color: #fafafa;
     border: 1px solid #e6e6e6;
+    z-index: 3;
 }
 
 .fixform a {
@@ -525,6 +643,7 @@ tr {
     width: 9px;
     height: 5px;
     background-image: url(../img/select.svg);
+    z-index: 1;
 }
 
 .formtable select {
