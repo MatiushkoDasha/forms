@@ -28,11 +28,51 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fontslab/RobotoSlab-Regular.woff2') format('woff2'),
+        url('../fontslab/RobotoSlab-Regular.woff') format('woff'),
+        url('../fontslab/RobotoSlab-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fontslab/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fontslab/RobotoSlab-Bold.woff') format('woff'),
+        url('../fontslab/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fontslab/RobotoSlab-Medium.woff2') format('woff2'),
+        url('../fontslab/RobotoSlab-Medium.woff') format('woff'),
+        url('../fontslab/RobotoSlab-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+} 
+
 * {
     margin: 0 ;
     padding: 0;
 }
 
+body {
+   font-family: 'Roboto';
+}
+hr {
+  border-top: 1px solid #ffffff;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-color: rgb(219, 219, 221);
+}
 a {
     text-decoration: none;
 }
@@ -111,7 +151,8 @@ select {
 
 textarea{
     width: 100%;
-    max-height: 110px;
+    max-height: 150px;
+    min-height: 130px;
     padding: 13px;
     resize: vertical;
     border-radius: 3px;
@@ -152,26 +193,27 @@ textarea{
 
 .commontextarea {
     width: 302px;
-    height: 102px;
+    min-height: 102px;
 }
 
-.commonbuttom {
-    display: block;
+.commonbuttom  {
     width: 330px;
-    height: 43px;
-    margin-top: 40px;
-    box-sizing: border-box;
-}
-
-.commonbuttom input {
-    width: 100%;
+    margin-top: 10px;
     padding: 12px;
     border-radius: 3px;
+    border: none;
     color: #ffffff;
     background-color: #12d661;
     cursor: pointer;
 }
 
+.commonbuttom a {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+}
 .element {
     padding-bottom: 90px;
 }
@@ -254,8 +296,8 @@ font-family: "Roboto";
     width: 15px;
     height: 15px;
     position: absolute;
-    transform: translate(-45%, -50%);
-    top: 50%;
+    transform: translate(-50%, -50%);
+    top: 48%;
     left: 49%;
     z-index: 1;
 }
@@ -551,6 +593,12 @@ tr {
     font-weight: 700;
 }
 
+.back:hover {
+        border: 1px solid #3e6aff;
+}
+.back:hover> a {
+    color: rgb(255, 255, 255);
+}
 
 .go {
     padding: 13px 30px;
@@ -581,6 +629,9 @@ tr {
     font-size: 13px;
     color: #3e6aff;
     font-weight: 400;
+}
+.pas {
+    text-decoration: underline;
 }
 
 .fixform {
@@ -649,4 +700,36 @@ tr {
 .formtable select {
     padding: 11px 16px;
     
+}
+
+.customtree {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    outline: 1px solid #cccccc;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.customtree svg {
+    fill: #ffffff;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    transform: translate(-45%, -50%);
+    top: 50%;
+    left: 49%;
+    z-index: 1;
+}
+
+.real:checked + .customtree  {
+    border-radius: 3px;
+    background-color: #ffffff;
+    outline: 1px solid #3e6aff;
+}
+
+.real:checked + .customtree svg {
+    fill: #3e6aff;
 }
